@@ -1,0 +1,65 @@
+*{
+    margin:0 auto;
+    padding:0 auto;
+}
+canvas {
+    cursor: crosshair;
+    display: block;
+}
+@keyframes font {
+    0% {opacity:0;color: red;}
+    25% {opacity:0.5;color:orange;}
+    50%{opacity:0.5;color:red;}
+    75%{opacity:0.5;color: orange;}
+    100%{opacity:0.5;color: red;}
+}
+@keyframes block {
+    0%{background-color: orange;}
+    50%{left:25%;background:red;}
+    60%{top:50%;width:200px;height:200px;left:25%;opacity:1;}
+    70%{top:0;left:0;width:400px;height:400px;opacity:0.2;border-radius: 0%}
+    80%{top:0;left:0;width:400px;height:400px;left:0;background-color: none;background-image: url(./img/shina.JPG);opacity:0.3;border-radius: 20%;}
+    100%{top:0;left:0;width:400px;height:400px;left:0;background-image: url(./img/shina.JPG);opacity:0.5;border-radius: 20%}
+}
+@keyframes forwards{
+    from{left:-1000px}
+    to{left:0;}
+}
+body{
+    background-color:beige;
+}
+.page{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.shina{
+    z-index: 9999;
+    text-align: center;
+    opacity: 0;
+    height: 100px;
+    color: red;
+    font-size:30px;
+    animation-name: font;
+    animation-delay: 5s;
+    animation-duration:6s;
+    animation-iteration-count: infinite;
+}
+.block{
+    z-index: -1;
+    float:left;
+    width:25%;
+    height:25%;
+    left:-1000px;
+    top:50%;
+    position: absolute;
+    background-color: orange;
+    animation: block 5s;
+    animation-fill-mode:forwards;
+}
+.fireworks-left{
+    
+}
+.fireworks-right{
+
+}
